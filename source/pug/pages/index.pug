@@ -1,0 +1,101 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Мария Шумова" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = "header--light"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+  -
+    const _block = {
+      intro: {
+        title: {
+          tag: "h1",
+          classMod:"size-m",
+          text: "Привет!<br/>Я&nbsp;&mdash; Мария Шумова,<br/>Front-end developer",
+        },
+        titlebg: {
+          path: "content",
+          image: "connect-bg",
+          format: "jpg",
+          width: "564",
+          height: "564",
+          altText: "Painting",
+        },
+        //- text: {
+        //-   textContent: [
+        //-     "Разрабатываю front-end на&nbsp;React + TypeScript.",
+        //-     "Верстаю адаптивно, семантично и&nbsp;кроссбраузерно. Создаю быстрые и&nbsp;современные веб-интерфейсы. Максимально нацелена на&nbsp;развитие.",
+        //-     "Получаю удовольствие от&nbsp;эффективной командной работы, не&nbsp;боюсь новых технологий и&nbsp;готова делиться своими идеями и&nbsp;навыками. Не&nbsp;не&nbsp;боюсь амбициозных целей и&nbsp;верю, что каждое действие должно приносить результат."
+        //-   ],
+        //-   classMods: ["size-l"],
+        //- },
+        slider: [
+          {
+            path: "content",
+            image: "freelancer",
+            format: "jpg",
+            width: "1160",
+            height: "772",
+            altText: "Freelancer.",
+            //- mediaArr: [
+            //-   {
+            //-     rule: "max-width",
+            //-     viewport: 767,
+            //-     suffix: "-size-s"
+            //-   },
+            //- ],
+          },
+          //- {
+          //-   path: "slides",
+          //-   image: "intro-img-4",
+          //-   format: "jpg",
+          //-   width: "1600",
+          //-   height: "950",
+          //-   altText: "Минималистичные механические настольные часы с тёмным циферблатом в металле бронзового оттенка.",
+          //-   mediaArr: [
+          //-     {
+          //-       rule: "max-width",
+          //-       viewport: 767,
+          //-       suffix: "-size-s"
+          //-     },
+          //-   ],
+          //- },
+          //- {
+          //-   path: "slides",
+          //-   image: "intro-img-5",
+          //-   format: "jpg",
+          //-   width: "1600",
+          //-   height: "950",
+          //-   altText: "Настольная лампа из металла оттенка светлой стали и глиняная матовая ваза на рабочем столе.",
+          //-   mediaArr: [
+          //-     {
+          //-       rule: "max-width",
+          //-       viewport: 767,
+          //-       suffix: "-size-s"
+          //-     },
+          //-   ],
+          //- },
+        ],
+      },
+      feedback: {
+        feedbackForm: {
+          hasAnimate: true,
+        },
+      },
+    }
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    .index-page
+      +page-intro(_block.intro)
+      +about(id="about").index-page__about
+      +features().index-page__features
+      +goods(id="projects").index-page__goods
+      //- +values().index-page__values
+      +dream-product(id="contacts").index-page__dream-product

@@ -1,0 +1,10 @@
+mixin main-nav(isIndex, currentUrl)
+  nav.main-nav
+    ul.main-nav__list(data-fix-block)
+      each link in headerLinks
+        - const activeState = currentUrl === link.href
+        li.main-nav__item
+          if(activeState)
+            span.main-nav__link.is-active!=link.text
+          else
+            +link({href: link.href, text: link.text}).main-nav__link

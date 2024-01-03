@@ -1,0 +1,30 @@
+mixin product-card(data={})
+  -
+    const {mods=[], tag = 'a', img, name, price, technologies, web, git, href='#'} = data
+    const modClasses = mods.map((mod) => `product-card--${mod}`)
+    const {animateDelay = '', animateImgClass = '', animateTextClass = ''} = data
+
+  .product-card(class=modClasses, data-animate=(animateTextClass || animateImgClass) && true)&attributes(attributes)
+    if img
+      .product-card__img(class=`${animateImgClass} ${animateDelay}`)
+        +picture(...img)
+    if name || price
+      .product-card__info(class=`${animateTextClass} ${animateDelay}`)
+        +picker-inline(technologies).product-card__picker-inline
+        if name
+          .product-card__name!= name
+        if price
+          span.product-card__decription!= price
+        .product-card__links
+          +link({
+            href: git,
+            text: "Git",
+            classMods: ["cta"],
+            icon: "forward",
+          })
+          +link({
+            href: web,
+            text: "Сайт",
+            classMods: ["cta", "accent"],
+            icon: "forward",
+          })

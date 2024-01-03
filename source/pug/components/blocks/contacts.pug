@@ -1,0 +1,58 @@
+mixin contacts()
+  -
+    const _block = {
+      title: "Контакты",
+      phone: {
+        href: "tel:+74955894050",
+        text: "<span>+7</span><span>900 000 00 00</span>",
+      },
+      socials: [
+        {
+          href: "https://t.me/shumova_mariia",
+          text: "Telegram",
+          classMods: [
+            "underlined",
+            "opacity-light",
+          ],
+          isExternal: true,
+        },
+        {
+          href: "https://github.com/shumova",
+          text: "Git",
+          classMods: [
+            "underlined",
+            "opacity-light",
+          ],
+          isExternal: true,
+        },
+      ],
+    }
+
+  .contacts&attributes(attributes)
+    .container.contacts__container
+      +title({
+        tag: "h1",
+        classMod:"size-l",
+        text: _block.title,
+      }).contacts__title
+      .contacts__contact-info
+        +link({
+          href: _block.phone.href,
+          text: _block.phone.text,
+        }).contacts__contact-info-item.contacts__phone
+        ul.contacts__contact-info-item.contacts__social-list
+          each social in _block.socials
+            li.contacts__social-item
+              +link({
+                  href: social.href,
+                  text: social.text,
+                  classMods: social.classMods,
+                  isExternal: social.isExternal,
+                })
+      .contacts__feedback
+        +title({
+          tag: "h2",
+          classMod:"size-xs",
+          text: "Cвяжитесь с&nbsp;нами",
+        }).contacts__feedback-title
+        +feedback-form().contacts__feedback-form

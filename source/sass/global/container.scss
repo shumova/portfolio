@@ -1,0 +1,37 @@
+.container {
+  --container-offset: 32px;
+
+  width: 100%;
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+
+  @include vp-1023 {
+    --container-offset: 20px;
+  }
+
+  @include vp-424 {
+    --container-offset: 10px;
+  }
+
+  .container-compensator {
+    margin: -10px calc(-1 * var(--container-offset));
+    padding: 10px var(--container-offset);
+
+    @include vp-767 {
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .container-reduce-vp-424 {
+    @include vp-424 {
+      margin: 0 calc(-1 * var(--container-offset));
+    }
+  }
+}

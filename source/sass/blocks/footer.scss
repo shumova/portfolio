@@ -1,0 +1,27 @@
+.footer {
+  padding: 50px 0 60px;
+  background-color: $color-rice-cake;
+
+  @include vp-639 {
+    padding: 40px 0 50px;
+  }
+
+  .footer__phone {
+    user-select: text;
+  }
+
+  .footer__links-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 25px;
+
+    @include vp-639 {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

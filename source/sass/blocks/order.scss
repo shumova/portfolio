@@ -1,0 +1,30 @@
+.order {
+  &__details {
+    display: grid;
+    grid-template-columns: 1.04fr 0.96fr;
+    column-gap: 49px;
+    margin-top: 24px;
+    border-top: 1px solid $color-el-paso-opacity-20;
+
+    @include vp-1023 {
+      grid-template-columns: 1.03fr 0.97fr;
+      column-gap: 30px;
+    }
+
+    @include vp-959 {
+      grid-template-columns: 1fr;
+      margin-top: 15px;
+
+      // чтобы поставить кнопку вниз страницы
+      position: relative;
+    }
+  }
+
+  &__form {
+    margin-top: 28px;
+
+    @include vp-959 {
+      margin-top: 20px;
+    }
+  }
+}

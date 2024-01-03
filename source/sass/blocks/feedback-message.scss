@@ -1,0 +1,28 @@
+.feedback-message {
+  text-align: center;
+
+  &__title {
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    color: $color-el-paso-opacity-70;
+
+    @include vp-767 {
+      margin-bottom: 27px;
+    }
+
+    @include vp-424 {
+      max-width: 220px;
+      margin: 0 auto;
+      margin-bottom: 27px;
+    }
+  }
+}

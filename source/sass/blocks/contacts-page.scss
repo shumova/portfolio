@@ -1,0 +1,22 @@
+.contacts-page {
+  --padding-top: 150px;
+  --padding-bottom: 208px;
+
+  padding-top: calc(var(--header-height) + var(--padding-top));
+  padding-bottom: var(--padding-bottom);
+
+  overflow-wrap: break-word;
+
+  @include vp-1023 {
+    --padding-bottom: 158px;
+  }
+
+  @include vp-833 {
+    --padding-top: 73px;
+    --padding-bottom: 175px;
+  }
+
+  @include vp-639 {
+    --padding-bottom: 76px;
+  }
+}

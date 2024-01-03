@@ -1,0 +1,70 @@
+.picker-inline {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: -10px 0 0 -10px;
+
+  pointer-events: none;
+
+  &__field {
+    margin: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    display: inline-block;
+    min-width: 24px;
+    padding: 2px 5px;
+
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    cursor: pointer;
+    user-select: none;
+    transform: translate3d(0);
+
+    border: 1px solid $color-el-paso-opacity-20;
+    transition: border-color $trans-default;
+  }
+
+  input {
+    @include hover {
+      + label {
+        border-color: $color-el-paso;
+      }
+    }
+
+    @include focus {
+      + label {
+        outline: 2px solid $color-el-paso;
+        outline-offset: 1px;
+      }
+    }
+
+    &:checked + label {
+      border-color: $color-el-paso;
+    }
+
+    &:disabled + label {
+      opacity: 0.4;
+
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    pointer-events: none;
+  }
+
+  &--square {
+    label {
+      width: 24px;
+      height: 24px;
+      padding: 2px;
+
+      background-clip: content-box;
+    }
+  }
+}

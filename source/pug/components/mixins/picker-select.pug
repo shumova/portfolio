@@ -1,0 +1,87 @@
+-
+  const pickerSelectColorData = {
+    title: "Цвет",
+    type: "color",
+    multiSelect: false,
+    fieldName: "color-10",
+    options: [
+      {
+        value: "#202020",
+        text: "Черный",
+      },
+      {
+        value: "#FFFFFF",
+        text: "Белый",
+      },
+      {
+        value: "#655248",
+        text: "Темно-коричневый",
+      },
+      {
+        value: "#C89D56",
+        text: "Светло-коричневый",
+        isActive: true,
+      },
+    ],
+  }
+
+-
+  const pickerSelectSizeData = {
+    title: "Размер",
+    type: "size",
+    multiSelect: false,
+    fieldName: "size-1",
+    options: [
+      {
+        value: "s",
+        text: "S",
+        isActive: true,
+      },
+      {
+        value: "m",
+        text: "M",
+      },
+      {
+        value: "l",
+        text: "L",
+      },
+    ],
+  }
+
+-
+  const pickerSelectSizeData1 = {
+    title: "Размер",
+    type: "size",
+    multiSelect: false,
+    fieldName: "size-2",
+    options: [
+      {
+        value: "d",
+        text: "Единый",
+        isActive: true,
+      },
+    ],
+  }
+
+mixin picker-select(data = pickerSelectColorData)
+  - const selectLabel = data.title ? data.title : false
+  - const buttonAriaLabel = data.buttonAriaLabel ? data.buttonAriaLabel : "Выберите одну из опций"
+  - const selectType = data.type ? data.type : false
+  //- мультиселект определяется по наличию нескольких вариантов с isActive: true
+  - const multiSelect = (data.options.filter((item) => item.isActive === true).length) > 1 ? "true" : false
+
+  .picker-select(class = "picker-select--" + data.type, data-select, data-multiple = multiSelect, data-insert = multiSelect, data-name=data.fieldName, data-id=`id-${data.fieldName}`)&attributes(attributes)
+    if selectLabel
+      span(data-select-label).picker-select__label=selectLabel
+    button.picker-select__button(type="button", data-select-button, aria-label=buttonAriaLabel)
+      span(data-select-text).picker-select__text
+      span.picker-select__icon
+    ul.picker-select__list(role="listbox", data-exclude-locomotive)
+      each item in data.options
+        if (!item.isDisabled)
+          - const ariaSelected = item.isActive ? "true" : "false"
+          li.picker-select__item(class=itemClass, tabindex="0", data-select-item, data-select-value=item.value, aria-selected=ariaSelected, role="option")
+            if selectType === "color"
+              span.picker-select__item-content(style = `background-color: ${item.value};`, data-select-content, title = item.text)
+            else if selectType === "size"
+              span.picker-select__item-content(data-select-content, title = item.text)= item.text

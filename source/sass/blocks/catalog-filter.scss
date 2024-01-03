@@ -1,0 +1,14 @@
+.catalog-filter__section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+
+.catalog-filter__section-title {
+  display: block;
+  margin: 0 0 19px;
+}

@@ -1,0 +1,9 @@
+.counter {
+  &::before {
+    content: "(";
+  }
+
+  &::after {
+    content: ")";
+  }
+}

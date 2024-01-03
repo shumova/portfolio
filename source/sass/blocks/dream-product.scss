@@ -1,0 +1,157 @@
+.dream-product {
+  position: relative;
+
+  background-color: rgba(112, 153, 119, 0.4);
+
+  @include vp-639 {
+    display: grid;
+    grid-template-rows: 1fr max(317px, 99vw) 125px;
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 48.15%;
+    height: 100%;
+
+    background-color: $color-star-dust;
+
+    @include vp-1023 {
+      width: 49%;
+    }
+
+    @include vp-767 {
+      width: 50%;
+    }
+
+    @include vp-639 {
+      position: static;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      align-self: end;
+
+      width: 100%;
+      height: max(317px, 99vw);
+
+      margin-top: auto;
+      margin-bottom: 125px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+
+    @include vp-639 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 4;
+    }
+  }
+
+  &__content-wrapper {
+    display: grid;
+    grid-template-columns: minmax(1px, 1fr);
+
+    @include vp-1023 {
+      margin-left: 0;
+    }
+
+    @include vp-639 {
+      grid-template-rows: auto max(317px, 99vw) auto;
+    }
+
+    img {
+      width: clamp(225px, 18vw, 285px);
+      height: clamp(225px, 18vw, 285px);
+
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+
+      object-fit: cover;
+      transform: translateX(-96.5%);
+
+      @include vp-1023 {
+        bottom: 4px;
+        width: clamp(200px, 23vw, 225px);
+        height: clamp(200px, 23vw, 225px);
+        transform: translateX(-95.6%);
+      }
+
+      @include vp-767 {
+        width: 200px;
+        height: 200px;
+        transform: translateX(-95%);
+      }
+
+      @include vp-639 {
+        position: relative;
+        top: auto;
+        bottom: -51px;
+        right: auto;
+
+        width: clamp(200px, 60vw, 285px);
+        height: clamp(200px, 60vw, 285px);
+
+        transform: translateX(-25%);
+      }
+    }
+
+    picture,
+    img {
+      @include vp-639 {
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__title {
+    padding-left: 25%;
+
+    @include vp-1279 {
+      padding-left: 0;
+    }
+
+    @include vp-1023 {
+      margin-right: calc(var(--container-offset) / 2 * -1);
+      margin-left: calc(var(--container-offset) / 2 * -1);
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+      margin-left: -5px;
+    }
+
+    .title__offset {
+      padding-left: 0;
+    }
+  }
+
+  &__link {
+    align-self: end;
+    justify-self: end;
+
+    max-width: 47%;
+    margin-top: clamp(348px, 26.5vw, 422px);
+
+    @include vp-767 {
+      margin-top: clamp(326px, 26.5vw, 348px);
+    }
+
+    @include vp-639 {
+      grid-row: 3 / 4;
+      justify-self: start;
+      max-width: 100%;
+      margin-top: 88px;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+mixin accordion(data)
+
+  .accordion(data-accordion="parent")&attributes(attributes)
+    each item in data
+      -
+        const {animateDelay = '', animateClass = ''} = item
+
+      .accordion__element(
+        data-accordion="element",
+        class=item.isActive && 'is-active',
+        class=`${animateClass} ${animateDelay}`
+      )
+        button.accordion__btn(type="button", data-accordion="button", aria-expanded="false").text.text--size-xl.text--light !{item.control}
+          +icon("icon-accordion-closed", 21, 16).accordion__btn-icon.accordion__btn-icon--closed
+          +icon("icon-accordion-opened", 40, 2).accordion__btn-icon.accordion__btn-icon--opened
+        .accordion__content(data-accordion="content")
+          .accordion__wrapper.text
+            each paragraph in item.content
+              p!= paragraph

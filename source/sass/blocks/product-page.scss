@@ -1,0 +1,43 @@
+.product-page {
+  padding-top: 145px;
+
+  @include vp-1023 {
+    padding-top: 147px;
+  }
+
+  @include vp-767 {
+    padding-top: 79px;
+  }
+}
+
+.product-page__back-link {
+  margin: 0 0 11px;
+
+  @include vp-1023 {
+    margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 18px;
+  }
+}
+
+.product-page__product {
+  margin-bottom: 170px;
+
+  @include vp-767 {
+    margin-bottom: 70px;
+  }
+}
+
+.product-page__related-products {
+  margin-bottom: 117px;
+
+  @include vp-767 {
+    margin-bottom: 97px;
+  }
+
+  @include vp-424 {
+    margin-bottom: 73px;
+  }
+}

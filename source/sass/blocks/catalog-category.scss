@@ -1,0 +1,55 @@
+.catalog-category__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: -15px 0 0 -77px;
+
+  list-style: none;
+
+  @include vp-1023 {
+    margin: -15px 0 0 -42px;
+    justify-content: space-between;
+  }
+}
+
+.catalog-category__item {
+  margin: 15px 0 0 77px;
+
+  @include vp-1023 {
+    margin: 15px 0 0 42px;
+  }
+}
+
+.catalog-category__label {
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    &:checked {
+      + span {
+        text-decoration-color: $color-el-paso;
+      }
+    }
+
+    @include hover {
+      + span {
+        text-decoration-color: $color-el-paso;
+      }
+    }
+
+    @include focus {
+      + span {
+        outline: 1px solid $color-el-paso;
+        outline-offset: 5px;
+      }
+    }
+  }
+
+  span {
+    text-decoration: underline;
+    text-decoration-color: $color-transparent;
+    text-underline-offset: 0.5em;
+
+    transition: text-decoration-color $trans-default;
+  }
+}

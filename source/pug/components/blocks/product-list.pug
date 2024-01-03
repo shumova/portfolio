@@ -1,0 +1,12 @@
+mixin product-list(data={})
+  -
+    const {mods=[], items} = data
+    const modClasses = mods.map((mod) => `product-list--${mod}`)
+
+  .product-list(class=modClasses)&attributes(attributes)
+    ul.product-list__wrapper
+      each item in items
+        li.product-list__item(
+          class=`${item.sizeMod ? `product-list__item--${item.sizeMod}` : ''}`
+        )
+          +product-card(item.productCard)

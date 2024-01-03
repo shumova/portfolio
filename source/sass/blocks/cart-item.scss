@@ -1,0 +1,149 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: min-content auto 1fr;
+  align-items: start;
+  grid-template-areas:
+    "pic item-info"
+    "pic item-param"
+    "pic item-counter";
+  column-gap: 20px;
+
+  @include vp-767 {
+    grid-template-rows: min-content 1fr auto;
+  }
+
+  @include vp-639 {
+    grid-template-areas:
+      "pic        item-info"
+      "item-param item-param"
+      "item-counter item-counter";
+    column-gap: 15px;
+  }
+
+  &__img {
+    grid-area: pic;
+
+    position: relative;
+    width: 180px;
+    background-color: $color-concrete;
+    overflow: hidden;
+
+    @include vp-767 {
+      width: 167px;
+    }
+
+    @include vp-639 {
+      width: 82px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    grid-area: item-info;
+    margin: -3px 0 0;
+
+    @include vp-424 {
+      margin-bottom: -3px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 2px;
+
+    @include vp-767 {
+      padding-right: 83px;
+    }
+
+    @include vp-639 {
+      padding-right: 35px;
+    }
+  }
+
+  &__price {
+    opacity: 0.5;
+  }
+
+  &__parameters {
+    grid-area: item-param;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 13px;
+
+    @include vp-767 {
+      align-self: end;
+    }
+  }
+
+  &__parameter-caption {
+    margin: 0 9px 0 0;
+
+    @include vp-767 {
+      margin-right: 8px;
+    }
+  }
+
+  &__color {
+    min-width: 35%;
+    margin-right: 20px;
+
+    @include vp-1023 {
+      min-width: 25.5%;
+    }
+
+    @include vp-767 {
+      min-width: 31%;
+    }
+
+    @include vp-639 {
+      min-width: 43%;
+    }
+
+    .cart-item__parameter-caption {
+      margin-right: 7px;
+
+      @include vp-767 {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__color,
+  &__size {
+    display: flex;
+    align-items: center;
+  }
+
+  &__counter {
+    grid-area: item-counter;
+    align-self: end;
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+
+    @include vp-424 {
+      margin-top: 18px;
+    }
+  }
+
+  &__remove-btn.link {
+    align-items: flex-end;
+  }
+}

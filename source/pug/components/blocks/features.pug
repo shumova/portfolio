@@ -1,0 +1,24 @@
+mixin features()
+  -
+    const _block = {
+      title: {
+        tag: "h2",
+        classMod: "size-xs",
+        text: "Навыки",
+      },
+      accordionData: [
+        {
+          control: "Навыки",
+          animateClass: 'fib',
+          content: [
+            "TypeScript, JavaScript", "React.js", "Redux, MobX", "axios", "Next", "Webpack", "Babel", "Jest, React Testing Library", "WebSocket", "Rest API", "HTML/CSS, SASS/LESS, Tailwind", "Node.js", "express", "Microservices & Monorepo", "Feature-Sliced Design", "Git", "Jira/Confluence/Notion",
+          ],
+        }
+      ]
+    }
+
+  section.features&attributes(attributes)
+    .container
+      .features__content-wrapper
+        //- +title(_block.title).features__title.fil(data-animate)
+        +accordion(_block.accordionData).features__accordion(data-animate)

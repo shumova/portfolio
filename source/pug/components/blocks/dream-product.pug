@@ -1,0 +1,55 @@
+mixin dream-product()
+  -
+    const _block = {
+      title: {
+        tag: "h2",
+        classMod:"size-m",
+        text: "<span class='fib d-100'>Давайте делать</span> <span class='fib d-300 title__offset'>классные проекты вместе</span>",
+      },
+      pictures: {
+        picture1: {
+          path: "content",
+          image: "connect-bg",
+          format: "jpg",
+          width: "564",
+          height: "1002",
+          altText: "Painting",
+          loading: "lazy",
+          //- mediaArr: [
+          //-   {
+          //-     rule: "max-width",
+          //-     viewport: 639,
+          //-     suffix: "-size-xs",
+          //-   },
+          //-   {
+          //-     rule: "max-width",
+          //-     viewport: 767,
+          //-     suffix: "-size-s",
+          //-   },
+          //-   {
+          //-     rule: "max-width",
+          //-     viewport: 1023,
+          //-     suffix: "-size-m",
+          //-   },
+          //- ],
+        },
+        picture2: {
+          path: "content",
+          image: "avatar",
+          format: "jpg",
+          width: "285",
+          height: "285",
+          altText: "Мария Шумова.",
+          loading: "lazy",
+        },
+      },
+    }
+
+  section.dream-product&attributes(attributes)
+    .dream-product__decor.cpir(data-animate)
+      +picture-cropping(_block.pictures.picture1)
+    .container.dream-product__container
+      .dream-product__content-wrapper
+        +title(_block.title).dream-product__title(data-animate)
+        +picture-cropping(_block.pictures.picture2).cpit(data-animate)
+        +link(_block.link).dream-product__link.fib(data-animate)

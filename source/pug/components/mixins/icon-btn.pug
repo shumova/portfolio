@@ -1,0 +1,12 @@
+mixin icon-btn(options = {})
+  - const tag = options.href ? "a" : "button";
+  - const href = options.href || false;
+  - const type = options.type || tag === "button" ? options.type || "button" : false;
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+  - const icon = options.icon || false;
+  - const name = options.name || false;
+  - const ariaLabel = options.ariaLabel || false;
+
+  #{tag}.icon-btn(href=href, target=target, rel=rel, type=type, name=name, aria-label=ariaLabel)&attributes(attributes)
+    +icon(icon.name, icon.width, icon.height).icon-btn__icon

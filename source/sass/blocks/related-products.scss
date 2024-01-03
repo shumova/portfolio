@@ -1,0 +1,9 @@
+.related-products__title {
+  margin: 0 0 49px;
+  max-width: 595px;
+
+  @include vp-767 {
+    margin-bottom: 31px;
+    max-width: 374px;
+  }
+}

@@ -1,0 +1,10 @@
+.selected-goods {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid $color-el-paso-opacity-20;
+  }
+}

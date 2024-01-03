@@ -1,0 +1,63 @@
+mixin footer(footerMods)
+  -
+    const _block = {
+      footerNavLinks: [
+        {
+          href: "catalog.html",
+          text: "Каталог"
+        },
+        {
+          href: "contacts.html",
+          text: "Контакты"
+        },
+        {
+          href: "info.html",
+          text: "Доставка и&nbsp;оплата"
+        },
+      ],
+
+      socialNetworksLinks: [
+        {
+          href: "tel:+79035586633",
+          text: "+7 903 558 66 33",
+          classMods: [
+            "underlined",
+            "opacity-light",
+          ],
+          isExternal: true,
+        },
+        {
+          href: "https://t.me/shumova_mariia",
+          text: "Telegram me",
+          classMods: [
+            "underlined",
+            "opacity-light",
+          ],
+          isExternal: true,
+        },
+        {
+          href: "https://github.com/shumova",
+          text: "Welcome to Git",
+          classMods: [
+            "underlined",
+            "opacity-light",
+          ],
+          isExternal: true,
+        },
+      ],
+    }
+
+  - const isIndex = currentUrl === "index.html"
+
+  footer.footer(class=footerMods)
+    .container
+      .footer__wrapper
+        ul.footer__links-list.footer__links-list--socials
+          each link in _block.socialNetworksLinks
+            li.footer__socials-item
+              +link({
+                href: link.href,
+                text: link.text,
+                classMods: link.classMods,
+                isExternal: link.isExternal,
+              }).footer__socials-link

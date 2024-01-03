@@ -1,0 +1,20 @@
+mixin page-intro(data={})
+  - const {slider, title, titlebg, text, link} = data
+
+  .page-intro(data-page-intro)&attributes(attributes)
+    .swiper.page-intro__slider-container(data-page-intro-slider, data-delay=4500, data-speed=1800)
+      .swiper-wrapper.page-intro__slider
+        each slide in slider
+          .swiper-slide.page-intro__slider-slide
+            +picture-cropping(slide).page-intro__slider-img
+    .container.page-intro__content-container
+      .page-intro__content-wrapper.fib.d-100(data-animate)
+        .page-intro__content-decor
+          +picture-cropping(titlebg)
+        +title(title).page-intro__title
+        //- .page-intro__content
+        //-   +text(text).page-intro__text.fib.d-200(data-animate)
+        //-   if link
+        //-     +link(link).page-intro__link.fib.d-400(data-animate)
+          //- .page-intro__slider-pagination-wrap.fib.d-500(data-animate)
+          //-   .page-intro__slider-pagination(data-page-intro-pagination)

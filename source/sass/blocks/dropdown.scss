@@ -1,0 +1,61 @@
+.dropdown {
+  position: relative;
+  z-index: 1;
+
+  &.active {
+    .dropdown__btn-icon {
+      transform: rotate(180deg);
+    }
+
+    .dropdown__content {
+      visibility: visible;
+
+      opacity: 1;
+    }
+  }
+}
+
+.dropdown__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  font: inherit;
+  color: inherit;
+
+  background: none;
+
+  transition: color $trans-default;
+
+  cursor: pointer;
+  user-select: none;
+
+  @include interactive-style {
+    color: rgba($color-el-paso, 0.5);
+  }
+}
+
+.dropdown__btn-icon {
+  width: 15px;
+  height: 8px;
+  margin-left: 10px;
+
+  transition: transform $trans-default;
+}
+
+.dropdown__content {
+  position: absolute;
+  top: calc(100% + 10px);
+  z-index: 2;
+  visibility: hidden;
+
+  padding: 20px;
+
+  background-color: $color-ivory;
+  box-shadow: inset 0 0 0 1px $color-concrete;
+  opacity: 0;
+
+  transition: visibility $trans-default, opacity $trans-default;
+}

@@ -1,0 +1,122 @@
+.link {
+  --icon-margin: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: $color-transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  letter-spacing: inherit;
+  overflow-wrap: anywhere;
+
+  &__text {
+    transition: opacity $trans-default, color $trans-default;
+  }
+
+  &.active {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  svg {
+    flex-shrink: 0;
+    height: 16px;
+    width: auto;
+
+    fill: currentColor;
+
+    transition: opacity $trans-default, transform $trans-default, color $trans-default;
+    transform: translateZ(0);
+  }
+
+  svg + &__text,
+  &__text + svg {
+    margin-left: var(--icon-margin);
+  }
+
+  @include interactive-style {
+    .link__text {
+      opacity: 0.5;
+    }
+  }
+
+  &--underlined {
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.04em;
+    text-underline-offset: 1px;
+    text-decoration-skip-ink: none;
+  }
+
+  &--opacity-intensive {
+    color: transparentize($color-el-paso, 0.5);
+  }
+
+  &--opacity-light {
+    color: transparentize($color-el-paso, 0.3);
+  }
+
+  &--opacity-half {
+    color: transparentize($color-el-paso, 0.5);
+
+    @include interactive-style {
+      color: $color-el-paso;
+    }
+
+    &.active {
+      color: $color-el-paso;
+    }
+  }
+
+  &--inverse {
+    @include interactive-style {
+      .link__text {
+        opacity: 1;
+      }
+
+      svg {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &--cta {
+    font-size: 16px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+
+    @include hover {
+      svg {
+        transform: translateX(10px) translateZ(0);
+      }
+    }
+  }
+
+  &--accent {
+    .link__text {
+      color: $color-burnt-orange;
+    }
+
+    @include interactive-style {
+      color: $color-burnt-orange;
+
+      .link__text {
+        opacity: 1;
+      }
+    }
+  }
+}

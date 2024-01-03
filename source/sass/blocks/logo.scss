@@ -1,0 +1,20 @@
+.logo {
+  flex-shrink: 0;
+  display: block;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    color: currentColor;
+    transition: opacity $trans-default, color $trans-default;
+    transform: translateZ(0);
+  }
+}
+
+.logo[href] {
+  @include interactive-style {
+    svg {
+      opacity: 0.5;
+    }
+  }
+}

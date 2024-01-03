@@ -1,0 +1,404 @@
+mixin goods()
+  -
+    const _block = {
+      title: {
+        tag: "h2",
+        classMod: "size-xs",
+        text: "Проекты",
+      },
+      link: {
+        href: "#",
+        text: "Каталог",
+        classMods: ["cta", "accent"],
+        icon: "forward",
+      },
+      productList: {
+        mods: ['one-row'],
+        items: [
+          {
+            sizeMod: 'big',
+            productCard: {
+              img: ["projects", "camera-shop", "jpg", 2700, 1700, "Camera shop."],
+              name: "Интернет-магазин фото- и видео-техники",
+              price: 'Работа с&nbsp;данными и адресной строкой (query-параметры), фильтрация, сортировка данных, пагинация, добавление и удаление товаров из корзины, промо-коды, оформление заказа, подгрузка и публикация отзывов о&nbsp;товаре, валидация форм, карусель и табы, юнит-тестирование и обработка ошибок (редирект на 404, toastify)',
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://camera-shop-rosy.vercel.app/",
+              git: "https://github.com/shumova/camera-shop",
+              technologies: {
+                type: "size",
+                multiSelect: false,
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "React",
+                    text: "React",
+                  },
+                  {
+                    value: "Redux Thunk",
+                    text: "Redux Thunk",
+                  },
+                  {
+                    value: "TypeScript",
+                    text: "TypeScript",
+                  },
+                  {
+                    value: "Jest",
+                    text: "Jest",
+                  },
+                  {
+                    value: "React Testing Library",
+                    text: "React Testing Library",
+                  },
+                  {
+                    value: "Axios",
+                    text: "Axios",
+                  },
+                  {
+                    value: "Toastify",
+                    text: "Toastify",
+                  },
+                  {
+                    value: "React Hook Form",
+                    text: "React Hook Form",
+                  },
+                  {
+                    value: "Webpack",
+                    text: "Webpack",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            sizeMod: 'big',
+            productCard: {
+              img: ["projects", "big-trip", "jpg", 2700, 1700, "Big trip."],
+              name: "Сервис планирования маршрута и стоимости путешествия",
+              price: "Архитектура приложения спроектирована по&nbsp;принципам ООП (Modal View Presenter) с&nbsp;использованием кастомного фреймворка",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/big-trip/",
+              git: "https://github.com/shumova/big-trip",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "VanilaJS",
+                    text: "VanilaJS",
+                  },
+                  {
+                    value: "OOP",
+                    text: "OOP",
+                  },
+                  {
+                    value: "Webpack",
+                    text: "Webpack",
+                  },
+                  {
+                    value: "Flatpickr",
+                    text: "Flatpickr",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "keksobooking", "jpg", 2700, 1700, "Keksobooking."],
+              name: "Сервис для&nbsp;сдачи недвижимости в&nbsp;аренду",
+              price: "Форма добавления объявления, валидация формы посредством Pristine Validate, отправка и получения данных с&nbsp;бэка, фильтрация объявлений на&nbsp;интерактивной leaflet-карте, debounce, связывание формы с&nbsp;координатами пина на карте с&nbsp;возможностью перемещения и получения реальных LAT & LNG. Вёрстка для&nbsp;проекта была предоставлена as is.",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/keksobooking/",
+              git: "https://github.com/shumova/keksobooking",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "VanilaJS",
+                    text: "VanilaJS",
+                  },
+                  {
+                    value: "Pristine",
+                    text: "Pristine",
+                  },
+                  {
+                    value: "leaflet",
+                    text: "leaflet",
+                  },
+                  {
+                    value: "no-ui-slider",
+                    text: "no-ui-slider"
+                  }
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "antarctic", "jpg", 2700, 1700, "Antarctic."],
+              name: "Круизы в&nbsp;Антарктику",
+              price: "Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/antarctic/",
+              git: "https://github.com/shumova/antarctic",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "HTML",
+                    text: "HTML",
+                  },
+                  {
+                    value: "SASS",
+                    text: "SASS",
+                  },
+                  {
+                    value: "BEM",
+                    text: "BEM",
+                  },
+                  {
+                    value: "VanilaJS",
+                    text: "VanilaJS",
+                  },
+                  {
+                    value: "Webpack",
+                    text: "Webpack",
+                  },
+                  {
+                    value: "Gulp",
+                    text: "Gulp",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "smart-device", "jpg", 2700, 1700, "Smart device."],
+              name: "Сайт производителя печатных плат",
+              price: "Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/smart-device/",
+              git: "https://github.com/shumova/smart-device",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "HTML",
+                    text: "HTML",
+                  },
+                  {
+                    value: "SASS",
+                    text: "SASS",
+                  },
+                  {
+                    value: "BEM",
+                    text: "BEM",
+                  },
+                  {
+                    value: "VanilaJS",
+                    text: "VanilaJS",
+                  },
+                  {
+                    value: "Webpack",
+                    text: "Webpack",
+                  },
+                  {
+                    value: "Gulp",
+                    text: "Gulp",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "supergym", "jpg", 2700, 1700, "Fitness."],
+              name: "Сайт фитнес клуба",
+              price: "Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/fitness/",
+              git: "https://github.com/shumova/fitness",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "HTML",
+                    text: "HTML",
+                  },
+                  {
+                    value: "SASS",
+                    text: "SASS",
+                  },
+                  {
+                    value: "BEM",
+                    text: "BEM",
+                  },
+                  {
+                    value: "VanilaJS",
+                    text: "VanilaJS",
+                  },
+                  {
+                    value: "Webpack",
+                    text: "Webpack",
+                  },
+                  {
+                    value: "Gulp",
+                    text: "Gulp",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "pognali", "jpg", 2700, 1700, "Pognali."],
+              name: "Сервис поиска попутчиков",
+              price: "Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/pognali/",
+              git: "https://github.com/shumova/pognali",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "HTML",
+                    text: "HTML",
+                  },
+                  {
+                    value: "LESS",
+                    text: "LESS",
+                  },
+                  {
+                    value: "BEM",
+                    text: "BEM",
+                  },
+                  {
+                    value: "VanilaJS",
+                    text: "VanilaJS",
+                  },
+                  {
+                    value: "Gulp",
+                    text: "Gulp",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "mishka", "jpg", 2700, 1700, "Mishka."],
+              name: "Интернет-магазин детских товаров",
+              price: "Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/mishka/",
+              git: "https://github.com/shumova/mishka",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "HTML",
+                    text: "HTML",
+                  },
+                  {
+                    value: "CSS",
+                    text: "CSS",
+                  },
+                  {
+                    value: "BEM",
+                    text: "BEM",
+                  },
+                  {
+                    value: "VanilaJS",
+                    text: "VanilaJS",
+                  },
+                  {
+                    value: "Gulp",
+                    text: "Gulp",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "device", "jpg", 2700, 1700, "Device."],
+              name: "Интернет-магазин электроники",
+              price: "Соблюдение семантики и&nbsp;доступности, состояния всех интерактивных элементов, сетки страниц на&nbsp;гридах&nbsp;/ флексах, pixel perfect, оптимизация кода",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/device/",
+              git: "https://github.com/shumova/device",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "HTML",
+                    text: "HTML",
+                  },
+                  {
+                    value: "CSS",
+                    text: "CSS",
+                  },
+                  {
+                    value: "BEM",
+                    text: "BEM",
+                  },
+                ],
+              }
+            }
+          },
+          {
+            productCard: {
+              img: ["projects", "gllacy", "jpg", 2700, 1700, "Gllacy."],
+              name: "Интернет-магазин мороженого",
+              price: "Соблюдение семантики и&nbsp;доступности, состояния всех интерактивных элементов, сетки страниц на&nbsp;гридах&nbsp;/ флексах, pixel perfect, оптимизация кода",
+              animateImgClass: 'cpit',
+              animateTextClass: 'fib',
+              web: "https://shumova.space/gllacy/",
+              git: "https://github.com/shumova/gllacy",
+              technologies: {
+                type: "size",
+                fieldName: "technologies",
+                options: [
+                  {
+                    value: "HTML",
+                    text: "HTML",
+                  },
+                  {
+                    value: "CSS",
+                    text: "CSS",
+                  },
+                  {
+                    value: "BEM",
+                    text: "BEM",
+                  },
+                ],
+              }
+            }
+          }
+        ]
+      }
+    }
+
+  section.goods&attributes(attributes)
+    .container.goods__container
+      +title(_block.title).goods__title.fil(data-animate)
+      .goods__product-list.container-compensator
+        +product-list(_block.productList)
+      //- +link(_block.link).goods__link.fib(data-animate)

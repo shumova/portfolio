@@ -1,0 +1,95 @@
+-
+  const pickerColorData = {
+    type: "color",
+    multiSelect: true,
+    fieldName: "color-1",
+    options: [
+      {
+        value: "#202020",
+        text: "Черный",
+        isActive: true,
+      },
+      {
+        value: "#FFFFFF",
+        text: "Белый",
+      },
+      {
+        value: "#655248",
+        text: "Темно-коричневый",
+      },
+      {
+        value: "#C89D56",
+        text: "Светло-коричневый",
+        isDisabled: true,
+      },
+    ],
+  }
+
+-
+  const pickerSizeData = {
+    type: "size",
+    multiSelect: false,
+    fieldName: "size-1",
+    options: [
+      {
+        value: "s",
+        text: "S",
+      },
+      {
+        value: "m",
+        text: "M",
+        isActive: true,
+      },
+      {
+        value: "l",
+        text: "L",
+      },
+    ],
+  }
+
+-
+  const pickerSizeData1 = {
+    type: "size",
+    multiSelect: false,
+    fieldName: "size-2",
+    options: [
+      {
+        value: "d",
+        text: "Единый",
+      },
+    ],
+  }
+
+mixin picker-inline(data = pickerColorData)
+  - const inputType = data.multiSelect ? "checkbox" : "radio"
+  - const spanClass = data.type === "color" ? "visually-hidden" : false
+  - const hasActiveOption = data.options.some((el) => "isActive" in el)
+  - let isActive = false
+  - let activeSetted = false
+  - let bgColor = false
+  - const componentClass = data.type === "color" ? "picker-inline--square" : false
+
+  .picker-inline(class = componentClass)&attributes(attributes)
+    each item, i in data.options
+      //- определение зачеканного инпута
+      //- if hasActiveOption && !item.isDisabled
+      //-   - isActive = item.isActive ? true : false
+      //- else if !item.isDisabled && !activeSetted
+      //-   - isActive = true
+      //-   - activeSetted = true
+      //- else
+      //-   - isActive = false
+
+      if data.type === "color"
+        - bgColor = item.value
+
+      if inputType === "checkbox"
+        .picker-inline__field
+          input(type = "checkbox", name = `${data.fieldName}-${i}`, id = `id-${data.fieldName}-${i}`, value = item.value, checked = isActive, disabled = item.isDisabled).visually-hidden
+          label(style = bgColor ? `background-color: ${bgColor};` : false, for = `id-${data.fieldName}-${i}`, title = item.text)
+            span(class = spanClass)!= item.text
+      if inputType === "radio"
+        .picker-inline__field
+          input(type = "radio", name = data.fieldName, id = `id-${data.fieldName}-${i}`, value = item.value, checked = isActive, disabled = item.isDisabled).visually-hidden
+          label(style = bgColor ? `background-color: ${bgColor};` : false, for = `id-${data.fieldName}-${i}`, title = item.text)
+            span(class = spanClass)!= item.text

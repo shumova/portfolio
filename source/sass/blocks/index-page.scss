@@ -1,0 +1,95 @@
+.index-page {
+  overflow-wrap: break-word;
+
+  &__goods {
+    // padding-top: 145px;
+    padding-bottom: 150px;
+
+    @include vp-767 {
+      // padding-top: 77px;
+      padding-bottom: 34px;
+    }
+
+    @include vp-639 {
+      padding-bottom: 38px;
+    }
+  }
+
+  &__values {
+    padding-top: 90px;
+    padding-bottom: 92px;
+
+    @include vp-767 {
+      padding-top: 42px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__features {
+    padding-top: 93px;
+    padding-bottom: 91px;
+
+    @include vp-767 {
+      padding-top: 42px;
+      padding-bottom: 54px;
+    }
+
+    @include vp-639 {
+      padding-top: 42px;
+      padding-bottom: 54px;
+    }
+  }
+
+  &__about {
+    padding-top: 90px;
+    // padding-bottom: 141px;
+
+    @include vp-1023 {
+      padding-top: 93px;
+      // padding-bottom: 141px;
+    }
+
+    @include vp-767 {
+      padding-top: 38px;
+      // padding-bottom: 83px;
+    }
+
+    @include vp-639 {
+      // padding-bottom: 84px;
+    }
+  }
+
+  &__dream-product {
+    padding-top: clamp(36px, 5.5vw, 86px);
+    padding-bottom: clamp(82px, 6.15vw, 99px);
+
+    @include vp-1023 {
+      padding-top: clamp(32px, 5vw, 36px);
+      padding-bottom: clamp(46px, 8.5vw, 82px);
+    }
+
+    @include vp-767 {
+      padding-top: 32px;
+      padding-bottom: 46px;
+    }
+
+    @include vp-639 {
+      padding-bottom: 39px;
+    }
+  }
+
+  &__feedback {
+    padding-top: 156px;
+    padding-bottom: 160px;
+
+    @include vp-767 {
+      padding-top: 80px;
+      padding-bottom: 85px;
+    }
+
+    @include vp-639 {
+      padding-top: 72px;
+      padding-bottom: 80px;
+    }
+  }
+}

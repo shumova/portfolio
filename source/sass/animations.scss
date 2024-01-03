@@ -1,0 +1,131 @@
+.fit,
+.fir,
+.fib,
+.fil {
+  @media not all and (pointer: coarse) {
+    opacity: 0;
+  }
+}
+
+.cpit,
+.cpir,
+.cpib,
+.cpil {
+  @media not all and (pointer: coarse) {
+    opacity: 0;
+  }
+}
+
+.is-loaded {
+  @media not all and (pointer: coarse) {
+    // Для анимации когда data-animate на самом элементе с классом анимации
+    .fit.show {
+      @include animation(fade-in-top, 0.8s, ease-in-out);
+    }
+
+    .fir.show {
+      @include animation(fade-in-right, 0.8s, ease-in-out);
+    }
+
+    .fib.show {
+      @include animation(fade-in-bottom, 0.8s, ease-in-out);
+    }
+
+    .fil.show {
+      @include animation(fade-in-left, 0.8s, ease-in-out);
+    }
+
+    .cpit.show {
+      @include animation(clip-path-up, 0.8s, ease-out);
+    }
+
+    .cpir.show {
+      @include animation(clip-path-right, 0.8s, ease-out);
+    }
+
+    .cpib.show {
+      @include animation(clip-path-down, 0.8s, ease-out);
+    }
+
+    .cpil.show {
+      @include animation(clip-path-left, 0.8s, ease-out);
+    }
+
+    // Для анимации когда data-animate на родительском эдементе
+    .show {
+      .fit {
+        @include animation(fade-in-top, 0.8s, ease-in-out);
+      }
+
+      .fir {
+        @include animation(fade-in-right, 0.8s, ease-in-out);
+      }
+
+      .fib {
+        @include animation(fade-in-bottom, 0.8s, ease-in-out);
+      }
+
+      .fil {
+        @include animation(fade-in-left, 0.8s, ease-in-out);
+      }
+
+      .cpit {
+        @include animation(clip-path-up, 0.8s, ease-out);
+      }
+
+      .cpir {
+        @include animation(clip-path-right, 0.8s, ease-out);
+      }
+
+      .cpib {
+        @include animation(clip-path-down, 0.8s, ease-out);
+      }
+
+      .cpil {
+        @include animation(clip-path-left, 0.8s, ease-out);
+      }
+    }
+  }
+}
+
+// --- Delays --- \\
+
+.d-100 {
+  animation-delay: 0.1s;
+}
+
+.d-200 {
+  animation-delay: 0.2s;
+}
+
+.d-300 {
+  animation-delay: 0.3s;
+}
+
+.d-400 {
+  animation-delay: 0.4s;
+}
+
+.d-500 {
+  animation-delay: 0.5s;
+}
+
+.d-600 {
+  animation-delay: 0.6s;
+}
+
+.d-700 {
+  animation-delay: 0.7s;
+}
+
+.d-800 {
+  animation-delay: 0.8s;
+}
+
+.d-900 {
+  animation-delay: 0.9s;
+}
+
+.d-1000 {
+  animation-delay: 1s;
+}

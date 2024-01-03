@@ -1,0 +1,69 @@
+mixin about()
+  -
+    const _block = {
+      title: {
+        tag: "h2",
+        classMod: "size-xs",
+        text: "Обо&nbsp;мне",
+      },
+      pictures: {
+        picture1: {
+          path: "content/main",
+          image: "about-img-1",
+          format: "jpg",
+          width: "283",
+          height: "283",
+          altText: "Интерьер гостиной в светлых бежевых тонах, где на на мягком угловом диване лежат декоративные подушки и небрежно оставленный плед.",
+          loading: "lazy",
+        },
+        picture2: {
+          path: "content/main",
+          image: "about-img-2",
+          format: "jpg",
+          width: "590",
+          height: "590",
+          altText: "Концелярские принадлежности на рабочем тёмно-коричневом столе.",
+          loading: "lazy",
+        },
+        picture3: {
+          path: "content/main",
+          image: "about-img-3",
+          format: "jpg",
+          width: "283",
+          height: "283",
+          altText: "Интерьер спальни в светлых бежевых тонах.",
+          loading: "lazy",
+        },
+      },
+      content: {
+        intro: {
+          textContent: [
+            "Разрабатываю front-end на&nbsp;React&nbsp;+&nbsp;TypeScript.",
+          ],
+          classMods: [
+            "size-xl",
+          ],
+        },
+        text: {
+          textContent: [
+            "Верстаю адаптивно, семантично и&nbsp;кроссбраузерно. Создаю быстрые и&nbsp;современные веб-интерфейсы. Максимально нацелена на&nbsp;развитие.",
+            "Получаю удовольствие от&nbsp;эффективной командной работы, не&nbsp;боюсь новых технологий и&nbsp;готова делиться своими идеями и&nbsp;навыками. Не&nbsp;боюсь амбициозных целей и&nbsp;верю, что каждое действие должно приносить результат."
+          ],
+        }
+      }
+    }
+
+  section.about&attributes(attributes)
+    .container
+      .about__content-wrapper
+        .about__intro-container
+          +title(_block.title).about__title.fil(data-animate)
+          //- .about__picture.cpit.d-100(data-animate)
+          //-   +picture-cropping(_block.pictures.picture1)
+          //- .about__picture.cpit.d-200(data-animate)
+          //-   +picture-cropping(_block.pictures.picture2)
+          //- .about__picture.cpit.d-100(data-animate)
+          //-   +picture-cropping(_block.pictures.picture3)
+        .about__text-container
+          +text(_block.content.intro).about__intro.fib(data-animate)
+          +text(_block.content.text).about__text.fib.d-100(data-animate)

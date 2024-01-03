@@ -1,0 +1,25 @@
+-
+  const headerLinks = [
+    {
+      href: "#about",
+      text: "Обо мне"
+    },
+    {
+      href: "#projects",
+      text: "Проекты"
+    },
+    {
+      href: "#contacts",
+      text: "Контакты"
+    },
+  ]
+
+//- поместить в массив страницы, на которых не должно быть ссылки на Корзину
+- const noCartLink = ["order.html"];
+
+mixin header(headerMods, currentUrl)
+  header.header(class=headerMods)
+    - const isIndex = currentUrl === "index.html"
+
+    .container
+      +main-nav(isIndex, currentUrl)

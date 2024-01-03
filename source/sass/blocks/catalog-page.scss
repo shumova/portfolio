@@ -1,0 +1,160 @@
+.catalog-page__section {
+  margin-bottom: 180px;
+
+  @include vp-767 {
+    margin-bottom: 75px;
+  }
+
+  &:last-child {
+    margin: 0 0 160px;
+
+    @include vp-767 {
+      margin: 0 0 80px;
+    }
+  }
+
+  &--main {
+    padding-top: 219px;
+
+    @include vp-1023 {
+      padding-top: 243px;
+    }
+
+    @include vp-767 {
+      padding-top: 115px;
+    }
+  }
+
+  &.feedback {
+    padding: 0;
+  }
+}
+
+.catalog-page__title-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 91px;
+
+  @include vp-1023 {
+    margin-bottom: 114px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 49px;
+  }
+
+  @include vp-424 {
+    margin-bottom: 46px;
+  }
+
+  .catalog-page__main-title {
+    margin: 0 5px 0 0;
+  }
+
+  .counter {
+    margin-left: auto;
+    margin-bottom: 32px;
+
+    @include vp-1023 {
+      margin-bottom: 7px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.catalog-page__main-title {
+  margin: 0 0 91px;
+}
+
+.catalog-page__filter-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: flex-start;
+  gap: 20px;
+
+  margin-bottom: 93px;
+
+  @include vp-1023 {
+    margin-bottom: 95px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 34px;
+    grid-template-columns: 2.3fr 1fr 1fr;
+    gap: 15px;
+  }
+
+  @include vp-639 {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.catalog-page__filter-category {
+  grid-column: span 2;
+
+  @include vp-1023 {
+    padding-right: 27px;
+  }
+
+  @include vp-767 {
+    grid-column: auto;
+    padding-right: 13px;
+  }
+
+  @include vp-639 {
+    grid-column: span 2;
+    padding-right: 0;
+  }
+}
+
+.catalog-page__dropdown-filter {
+  @include vp-1023 {
+    justify-self: flex-end;
+  }
+
+  @include vp-639 {
+    justify-self: flex-start;
+  }
+
+  .dropdown__content {
+    left: 5px;
+
+    width: 275px;
+
+    @include vp-1023 {
+      left: auto;
+      right: 5px;
+    }
+
+    @include vp-767 {
+      right: -145px;
+
+      width: 280px;
+    }
+
+    @include vp-639 {
+      right: auto;
+      left: 5px;
+
+      width: 290px;
+    }
+  }
+}
+
+.catalog-page__dropdown-sort {
+  justify-self: flex-end;
+
+  .dropdown__content {
+    right: 5px;
+
+    width: 275px;
+
+    @include vp-1023 {
+      width: 215px;
+    }
+  }
+}
