@@ -7,7 +7,6 @@ import {initLocoScroll} from './modules/locomotive-scroll';
 import {initScrollAnimation} from './modules/animation/scroll-animation';
 import {initPreloader} from './modules/init-preloader';
 import {iosInputScaleFix} from './utils/ios-input-scale-fix';
-import {initExcludeLocomotive} from './modules/init-exclude-locomotive';
 import {initMainNav} from './modules/init-main-nav';
 
 // ---------------------------------

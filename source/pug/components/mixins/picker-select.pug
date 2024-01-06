@@ -76,7 +76,7 @@ mixin picker-select(data = pickerSelectColorData)
     button.picker-select__button(type="button", data-select-button, aria-label=buttonAriaLabel)
       span(data-select-text).picker-select__text
       span.picker-select__icon
-    ul.picker-select__list(role="listbox", data-exclude-locomotive)
+    ul.picker-select__list(role="listbox")
       each item in data.options
         if (!item.isDisabled)
           - const ariaSelected = item.isActive ? "true" : "false"
