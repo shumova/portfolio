@@ -7,7 +7,6 @@ import {initLocoScroll} from './modules/locomotive-scroll';
 import {initScrollAnimation} from './modules/animation/scroll-animation';
 import {initPreloader} from './modules/init-preloader';
 import {iosInputScaleFix} from './utils/ios-input-scale-fix';
-import {initMainNav} from './modules/init-main-nav';
 
 // ---------------------------------
 
@@ -19,7 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   staticVh();
   iosInputScaleFix();
-  initMainNav();
 
   // Modules
   // ---------------------------------
@@ -30,12 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeaderHeight();
   initAccordions();
   initScrollAnimation();
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initExcludeLocomotive();
-  });
 });
 
 // ---------------------------------

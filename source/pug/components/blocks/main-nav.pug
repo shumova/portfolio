@@ -7,4 +7,4 @@ mixin main-nav(isIndex, currentUrl)
           if(activeState)
             span.main-nav__link.is-active!=link.text
           else
-            +link({href: link.href, text: link.text}).main-nav__link
+            +link({href: link.href, text: link.text}).main-nav__link(data-scroll-to)
