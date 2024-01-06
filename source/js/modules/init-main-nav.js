@@ -1,87 +1,41 @@
-import {FocusLock} from '../utils/focus-lock';
-import {disablePageScroll, enablePageScroll} from '../vendor/scroll-lock';
 
-const focusLock = new FocusLock();
 
-const header = document.querySelector('.header');
-const mainNav = header ? header.querySelector('.main-nav') : null;
-const mainNavBtn = mainNav ? mainNav.querySelector('[data-nav-toggle]') : null;
-const mainNavList = mainNav ? mainNav.querySelector('.main-nav__list') : null;
-const linksArray = mainNav ? Array.from(mainNav.querySelectorAll('.main-nav__list a')) : null;
-// const mainNavTopBg = mainNav ? mainNav.querySelector('.main-nav__top-bg') : null;
-const breakpoint = window.matchMedia('(max-width: 767px)');
-
-const openMenu = () => {
-  if (!header.classList.contains('is-opened')) {
-    mainNavBtn.setAttribute('aria-label', 'Закрыть меню');
-    mainNavBtn.setAttribute('aria-pressed', 'true');
-    header.classList.add('is-opened');
-    mainNav.classList.add('is-opened');
-    mainNav.classList.add('is-visible');
-    linksArray.forEach((item) => item.removeAttribute('tabindex'));
-
-    document.addEventListener('keydown', onDocumentKeydown);
-    focusLock.lock('.main-nav');
-    disablePageScroll(mainNav);
+class MainNav {
+  constructor() {
+    this.selector = '[data-main-nav]';
+    this.animateClassName = 'show';
   }
-};
 
-const closeMenu = () => {
-  if (header.classList.contains('is-opened')) {
-    mainNavBtn.setAttribute('aria-label', 'Открыть меню');
-    mainNavBtn.setAttribute('aria-pressed', 'false');
-    header.classList.remove('is-opened');
-    linksArray.forEach((item) => item.setAttribute('tabindex', '-1'));
-    mainNav.classList.remove('is-visible');
-    setTimeout(() => {
-      mainNav.classList.remove('is-opened');
-    }, 300);
-
-    document.removeEventListener('keydown', onDocumentKeydown);
-    focusLock.unlock();
-    enablePageScroll(mainNav);
+  init() {
+    this.getLinks();
   }
-};
 
-const onDocumentClick = (evt) => {
-  // клик за пределами меню
-  if (!evt.target.closest('.main-nav')) {
-    closeMenu();
-  }
-  // кнопка закрытия
-  if (breakpoint.matches && evt.target.closest('[data-nav-toggle]')) {
-    if (mainNav.classList.contains('is-opened')) {
-      closeMenu();
-    } else {
-      openMenu();
+  handleMainNavLinkClick(evt) {
+    const hash = new URL(this.href).hash;
+    const chapter = document.querySelector(hash);
+    const showedEls = chapter.querySelectorAll('.show');
+
+    if (showedEls.length) {
+      evt.preventDefault();
+
+      [...showedEls].forEach((el) => el.classList.remove('show'));
+
+      this.click();
+
+      setTimeout(() => {
+        [...showedEls].forEach((el) => el.classList.add('show'));
+      }, 100);
     }
   }
-  // нажатие на ссылки
-  if (breakpoint.matches && evt.target.closest('.main-nav a[href]')) {
-    if (mainNav.classList.contains('is-opened')) {
-      closeMenu();
-    }
+
+  getLinks() {
+    const mainNav = document.querySelector(this.selector);
+    const mainNavLinks = mainNav.querySelectorAll('a');
+
+    [...mainNavLinks].forEach((el) => el.addEventListener('click', this.handleMainNavLinkClick));
   }
+}
+
+export const initMainNav = () => {
+  new MainNav().init();
 };
-
-const onDocumentKeydown = function (evt) {
-  if (evt.key === 'Escape') {
-    evt.preventDefault();
-    closeMenu();
-  }
-};
-
-
-const updateYear = () => {
-  mainNavList.dataset.year = (new Date()).getFullYear();
-};
-
-
-const initMainNav = () => {
-  if (header && mainNav) {
-    updateYear();
-    document.addEventListener('click', onDocumentClick);
-  }
-};
-
-export {initMainNav};

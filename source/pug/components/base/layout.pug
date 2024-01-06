@@ -31,10 +31,10 @@ html(lang="ru", class="no-scrollbar")
   body
     +sprite()
 
-    if (hasHeader)
-      +header(headerMods, currentUrl)
-
     .wrapper(class=wrapperMods, data-scroll-container)
+      if (hasHeader)
+        +header(headerMods, currentUrl)
+
       block main
 
       if (hasFooter)

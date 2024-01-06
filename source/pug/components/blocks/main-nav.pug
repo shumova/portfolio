@@ -1,5 +1,5 @@
 mixin main-nav(isIndex, currentUrl)
-  nav.main-nav
+  nav.main-nav(data-main-nav)
     ul.main-nav__list(data-fix-block)
       each link in headerLinks
         - const activeState = currentUrl === link.href

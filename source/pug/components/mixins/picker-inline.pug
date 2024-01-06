@@ -84,12 +84,12 @@ mixin picker-inline(data = pickerColorData)
         - bgColor = item.value
 
       if inputType === "checkbox"
-        .picker-inline__field
-          input(type = "checkbox", name = `${data.fieldName}-${i}`, id = `id-${data.fieldName}-${i}`, value = item.value, checked = isActive, disabled = item.isDisabled).visually-hidden
-          label(style = bgColor ? `background-color: ${bgColor};` : false, for = `id-${data.fieldName}-${i}`, title = item.text)
+        label.picker-inline__field
+          input(type = "checkbox", name = `${data.fieldName}-${i}`, value = item.value, checked = isActive, disabled = item.isDisabled).visually-hidden
+          span(style = bgColor ? `background-color: ${bgColor};` : false, title = item.text)
             span(class = spanClass)!= item.text
       if inputType === "radio"
-        .picker-inline__field
-          input(type = "radio", name = data.fieldName, id = `id-${data.fieldName}-${i}`, value = item.value, checked = isActive, disabled = item.isDisabled).visually-hidden
-          label(style = bgColor ? `background-color: ${bgColor};` : false, for = `id-${data.fieldName}-${i}`, title = item.text)
+        label.picker-inline__field
+          input(type = "radio", name = data.fieldName, value = item.value, checked = isActive, disabled = item.isDisabled).visually-hidden
+          span(style = bgColor ? `background-color: ${bgColor};` : false, title = item.text)
             span(class = spanClass)!= item.text
