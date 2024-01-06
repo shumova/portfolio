@@ -60,27 +60,27 @@
   <path d="M83.5849 38.7744V38.5621L84.3811 38.1507V30.9319L83.5849 30.4542V30.2817H90.034L90.3127 31.9802H90.0606L89.2511 30.7329C86.8094 30.7329 85.5886 30.7373 85.5886 30.7461V34.1565H88.6672L88.2824 34.6475H85.5886V38.3099H89.2511L90.0473 37.1024H90.3127L90.034 38.7611L83.5849 38.7744Z" fill="currentColor"/>
 </g></symbol></svg>
     </div>
-    <header class="header header--light">
-      <div class="container">
-        <nav class="main-nav">
-          <ul class="main-nav__list" data-fix-block>
-            <li class="main-nav__item">
-              <a class="link main-nav__link" href="#about"><span class="link__text">Обо мне</span>
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="link main-nav__link" href="#projects"><span class="link__text">Проекты</span>
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="link main-nav__link" href="#contacts"><span class="link__text">Контакты</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
     <div class="wrapper" data-scroll-container>
+      <header class="header header--light">
+        <div class="container">
+          <nav class="main-nav" data-main-nav>
+            <ul class="main-nav__list" data-fix-block>
+              <li class="main-nav__item">
+                <a class="link main-nav__link" href="#about"><span class="link__text">Обо мне</span>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="link main-nav__link" href="#projects"><span class="link__text">Проекты</span>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="link main-nav__link" href="#contacts"><span class="link__text">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <main>
         <div class="index-page">
           <div class="page-intro" data-page-intro>
@@ -176,42 +176,33 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="React">
-                              <label for="id-technologies-0" title="React"><span>React</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="Redux Thunk">
-                              <label for="id-technologies-1" title="Redux Thunk"><span>Redux Thunk</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="TypeScript">
-                              <label for="id-technologies-2" title="TypeScript"><span>TypeScript</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="Jest">
-                              <label for="id-technologies-3" title="Jest"><span>Jest</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-4" value="React Testing Library">
-                              <label for="id-technologies-4" title="React Testing Library"><span>React Testing Library</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-5" value="Axios">
-                              <label for="id-technologies-5" title="Axios"><span>Axios</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-6" value="Toastify">
-                              <label for="id-technologies-6" title="Toastify"><span>Toastify</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-7" value="React Hook Form">
-                              <label for="id-technologies-7" title="React Hook Form"><span>React Hook Form</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-8" value="Webpack">
-                              <label for="id-technologies-8" title="Webpack"><span>Webpack</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="React"><span title="React"><span>React</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Redux Thunk"><span title="Redux Thunk"><span>Redux Thunk</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="TypeScript"><span title="TypeScript"><span>TypeScript</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Jest"><span title="Jest"><span>Jest</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="React Testing Library"><span title="React Testing Library"><span>React Testing Library</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Axios"><span title="Axios"><span>Axios</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Toastify"><span title="Toastify"><span>Toastify</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="React Hook Form"><span title="React Hook Form"><span>React Hook Form</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Webpack"><span title="Webpack"><span>Webpack</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Интернет-магазин фото- и видео-техники</div><span class="product-card__decription">Работа с&nbsp;данными и адресной строкой (query-параметры), фильтрация, сортировка данных, пагинация, добавление и удаление товаров из корзины, промо-коды, оформление заказа, подгрузка и публикация отзывов о&nbsp;товаре, валидация форм, карусель и табы, юнит-тестирование и обработка ошибок (редирект на 404, toastify)</span>
                           <div class="product-card__links">
@@ -238,22 +229,18 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="VanilaJS">
-                              <label for="id-technologies-0" title="VanilaJS"><span>VanilaJS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="OOP">
-                              <label for="id-technologies-1" title="OOP"><span>OOP</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="Webpack">
-                              <label for="id-technologies-2" title="Webpack"><span>Webpack</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="Flatpickr">
-                              <label for="id-technologies-3" title="Flatpickr"><span>Flatpickr</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="VanilaJS"><span title="VanilaJS"><span>VanilaJS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="OOP"><span title="OOP"><span>OOP</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Webpack"><span title="Webpack"><span>Webpack</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Flatpickr"><span title="Flatpickr"><span>Flatpickr</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Сервис планирования маршрута и стоимости путешествия</div><span class="product-card__decription">Архитектура приложения спроектирована по&nbsp;принципам ООП (Modal View Presenter) с&nbsp;использованием кастомного фреймворка</span>
                           <div class="product-card__links">
@@ -280,22 +267,18 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="VanilaJS">
-                              <label for="id-technologies-0" title="VanilaJS"><span>VanilaJS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="Pristine">
-                              <label for="id-technologies-1" title="Pristine"><span>Pristine</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="leaflet">
-                              <label for="id-technologies-2" title="leaflet"><span>leaflet</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="no-ui-slider">
-                              <label for="id-technologies-3" title="no-ui-slider"><span>no-ui-slider</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="VanilaJS"><span title="VanilaJS"><span>VanilaJS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Pristine"><span title="Pristine"><span>Pristine</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="leaflet"><span title="leaflet"><span>leaflet</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="no-ui-slider"><span title="no-ui-slider"><span>no-ui-slider</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Сервис для&nbsp;сдачи недвижимости в&nbsp;аренду</div><span class="product-card__decription">Форма добавления объявления, валидация формы посредством Pristine Validate, отправка и получения данных с&nbsp;бэка, фильтрация объявлений на&nbsp;интерактивной leaflet-карте, debounce, связывание формы с&nbsp;координатами пина на карте с&nbsp;возможностью перемещения и получения реальных LAT & LNG. Вёрстка для&nbsp;проекта была предоставлена as is.</span>
                           <div class="product-card__links">
@@ -322,30 +305,24 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="HTML">
-                              <label for="id-technologies-0" title="HTML"><span>HTML</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="SASS">
-                              <label for="id-technologies-1" title="SASS"><span>SASS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="BEM">
-                              <label for="id-technologies-2" title="BEM"><span>BEM</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="VanilaJS">
-                              <label for="id-technologies-3" title="VanilaJS"><span>VanilaJS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-4" value="Webpack">
-                              <label for="id-technologies-4" title="Webpack"><span>Webpack</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-5" value="Gulp">
-                              <label for="id-technologies-5" title="Gulp"><span>Gulp</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="HTML"><span title="HTML"><span>HTML</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="SASS"><span title="SASS"><span>SASS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="BEM"><span title="BEM"><span>BEM</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="VanilaJS"><span title="VanilaJS"><span>VanilaJS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Webpack"><span title="Webpack"><span>Webpack</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Gulp"><span title="Gulp"><span>Gulp</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Круизы в&nbsp;Антарктику</div><span class="product-card__decription">Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html</span>
                           <div class="product-card__links">
@@ -372,30 +349,24 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="HTML">
-                              <label for="id-technologies-0" title="HTML"><span>HTML</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="SASS">
-                              <label for="id-technologies-1" title="SASS"><span>SASS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="BEM">
-                              <label for="id-technologies-2" title="BEM"><span>BEM</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="VanilaJS">
-                              <label for="id-technologies-3" title="VanilaJS"><span>VanilaJS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-4" value="Webpack">
-                              <label for="id-technologies-4" title="Webpack"><span>Webpack</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-5" value="Gulp">
-                              <label for="id-technologies-5" title="Gulp"><span>Gulp</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="HTML"><span title="HTML"><span>HTML</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="SASS"><span title="SASS"><span>SASS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="BEM"><span title="BEM"><span>BEM</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="VanilaJS"><span title="VanilaJS"><span>VanilaJS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Webpack"><span title="Webpack"><span>Webpack</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Gulp"><span title="Gulp"><span>Gulp</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Сайт производителя печатных плат</div><span class="product-card__decription">Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html</span>
                           <div class="product-card__links">
@@ -422,30 +393,24 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="HTML">
-                              <label for="id-technologies-0" title="HTML"><span>HTML</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="SASS">
-                              <label for="id-technologies-1" title="SASS"><span>SASS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="BEM">
-                              <label for="id-technologies-2" title="BEM"><span>BEM</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="VanilaJS">
-                              <label for="id-technologies-3" title="VanilaJS"><span>VanilaJS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-4" value="Webpack">
-                              <label for="id-technologies-4" title="Webpack"><span>Webpack</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-5" value="Gulp">
-                              <label for="id-technologies-5" title="Gulp"><span>Gulp</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="HTML"><span title="HTML"><span>HTML</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="SASS"><span title="SASS"><span>SASS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="BEM"><span title="BEM"><span>BEM</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="VanilaJS"><span title="VanilaJS"><span>VanilaJS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Webpack"><span title="Webpack"><span>Webpack</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Gulp"><span title="Gulp"><span>Gulp</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Сайт фитнес клуба</div><span class="product-card__decription">Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html</span>
                           <div class="product-card__links">
@@ -472,26 +437,21 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="HTML">
-                              <label for="id-technologies-0" title="HTML"><span>HTML</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="LESS">
-                              <label for="id-technologies-1" title="LESS"><span>LESS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="BEM">
-                              <label for="id-technologies-2" title="BEM"><span>BEM</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="VanilaJS">
-                              <label for="id-technologies-3" title="VanilaJS"><span>VanilaJS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-4" value="Gulp">
-                              <label for="id-technologies-4" title="Gulp"><span>Gulp</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="HTML"><span title="HTML"><span>HTML</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="LESS"><span title="LESS"><span>LESS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="BEM"><span title="BEM"><span>BEM</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="VanilaJS"><span title="VanilaJS"><span>VanilaJS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Gulp"><span title="Gulp"><span>Gulp</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Сервис поиска попутчиков</div><span class="product-card__decription">Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html</span>
                           <div class="product-card__links">
@@ -518,26 +478,21 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="HTML">
-                              <label for="id-technologies-0" title="HTML"><span>HTML</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="CSS">
-                              <label for="id-technologies-1" title="CSS"><span>CSS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="BEM">
-                              <label for="id-technologies-2" title="BEM"><span>BEM</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-3" value="VanilaJS">
-                              <label for="id-technologies-3" title="VanilaJS"><span>VanilaJS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-4" value="Gulp">
-                              <label for="id-technologies-4" title="Gulp"><span>Gulp</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="HTML"><span title="HTML"><span>HTML</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="CSS"><span title="CSS"><span>CSS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="BEM"><span title="BEM"><span>BEM</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="VanilaJS"><span title="VanilaJS"><span>VanilaJS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="Gulp"><span title="Gulp"><span>Gulp</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Интернет-магазин детских товаров</div><span class="product-card__decription">Адаптивная кроссбраузерная вёрстка, работа как с&nbsp;JS, так и&nbsp;без, автоматизация сборки в&nbsp;Gulp: оптимизация изображений, использование WebP, svg sprite, минификация стилей, скриптов, html</span>
                           <div class="product-card__links">
@@ -564,18 +519,15 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="HTML">
-                              <label for="id-technologies-0" title="HTML"><span>HTML</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="CSS">
-                              <label for="id-technologies-1" title="CSS"><span>CSS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="BEM">
-                              <label for="id-technologies-2" title="BEM"><span>BEM</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="HTML"><span title="HTML"><span>HTML</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="CSS"><span title="CSS"><span>CSS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="BEM"><span title="BEM"><span>BEM</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Интернет-магазин электроники</div><span class="product-card__decription">Соблюдение семантики и&nbsp;доступности, состояния всех интерактивных элементов, сетки страниц на&nbsp;гридах&nbsp;/ флексах, pixel perfect, оптимизация кода</span>
                           <div class="product-card__links">
@@ -602,18 +554,15 @@
                         </div>
                         <div class="product-card__info fib ">
                           <div class="picker-inline product-card__picker-inline">
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-0" value="HTML">
-                              <label for="id-technologies-0" title="HTML"><span>HTML</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-1" value="CSS">
-                              <label for="id-technologies-1" title="CSS"><span>CSS</span></label>
-                            </div>
-                            <div class="picker-inline__field">
-                              <input class="visually-hidden" type="radio" name="technologies" id="id-technologies-2" value="BEM">
-                              <label for="id-technologies-2" title="BEM"><span>BEM</span></label>
-                            </div>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="HTML"><span title="HTML"><span>HTML</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="CSS"><span title="CSS"><span>CSS</span></span>
+                            </label>
+                            <label class="picker-inline__field">
+                              <input class="visually-hidden" type="radio" name="technologies" value="BEM"><span title="BEM"><span>BEM</span></span>
+                            </label>
                           </div>
                           <div class="product-card__name">Интернет-магазин мороженого</div><span class="product-card__decription">Соблюдение семантики и&nbsp;доступности, состояния всех интерактивных элементов, сетки страниц на&nbsp;гридах&nbsp;/ флексах, pixel perfect, оптимизация кода</span>
                           <div class="product-card__links">

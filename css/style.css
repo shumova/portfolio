@@ -5012,7 +5012,6 @@ svg + .link__text,
   }
 
   .main-nav {
-    max-width: 715px;
     margin-top: 4px;
   }
 
@@ -5429,7 +5428,6 @@ svg + .link__text,
 
   .main-nav {
     --menu-items-gap: 30px;
-    max-width: 330px;
     margin-top: -2px;
     cursor: auto;
   }
@@ -6112,14 +6110,6 @@ svg + .link__text,
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .main-nav {
-    max-width: 100%;
-  }
-
-  .main-nav__top-bg {
-    width: 100%;
-  }
-
   .title--size-l {
     font-size: 52px;
   }
@@ -6717,6 +6707,12 @@ svg + .link__text,
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
+  }
+}
+
+@media (pointer: coarse) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
