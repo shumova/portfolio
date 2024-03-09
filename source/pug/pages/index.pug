@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Мария Шумова" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Mariia Shumova" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = "header--light"
@@ -15,7 +15,7 @@ block variables
         title: {
           tag: "h1",
           classMod:"size-m",
-          text: "Привет!<br/>Я&nbsp;&mdash; Мария Шумова,<br/>Front-end developer",
+          text: "Hi there!<br/>I'm&nbsp;Mariia Shumova,<br/>Frontend developer",
         },
         titlebg: {
           path: "content",
@@ -90,8 +90,6 @@ block variables
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
     .index-page
       +page-intro(_block.intro)
       +about(id="about").index-page__about
